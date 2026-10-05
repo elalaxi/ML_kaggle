@@ -26,7 +26,6 @@ data/
 datasets/
 input/
 output/
-*.csv
 *.parquet
 *.zip
 *.tar
