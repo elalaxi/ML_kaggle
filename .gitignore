@@ -1,0 +1,59 @@
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env/
+env/
+venv/
+ENV/
+.venv/
+
+# --- IDEs & Operating Systems ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- Data & Kaggle ---
+# Ignore raw datasets, processed data, and compressed archives downloaded from Kaggle
+data/
+datasets/
+input/
+output/
+*.csv
+*.parquet
+*.zip
+*.tar
+*.gz
+*.json
+!config.json # Keep template configuration files if needed
+
+# Keep your Kaggle API credentials private! Never commit this.
+kaggle.json
+
+# --- Machine Learning Models & Artifacts ---
+# Ignore trained weights, model binaries, and serialized objects
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.onnx
+*.weights
+models/
+checkpoints/
+
+# --- Experiment Tracking & Logs ---
+# TensorBoard, MLflow, Weights & Biases logs
+runs/
+mlruns/
+wandb/
+logs/
+*.log
