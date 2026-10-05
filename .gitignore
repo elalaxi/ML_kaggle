@@ -22,7 +22,6 @@ Thumbs.db
 
 # --- Data & Kaggle ---
 # Ignore raw datasets, processed data, and compressed archives downloaded from Kaggle
-data/
 datasets/
 input/
 output/
