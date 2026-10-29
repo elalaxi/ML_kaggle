@@ -1,8 +1,8 @@
 # A faire :
 * `Extracurricular_Activities` : one hot encode
 * Normaliser les valeurs
-* Vérifier la distribution de la classe cible
 * Fixer la graine pour la séparation en train / test
+* Validation croisée (`StratifiedKFold` : `Shuffle= True`)
 * fit
 * predict
 * Si régression linéaire, plot les coeff en diagramme en bâtons
@@ -18,4 +18,7 @@
 
 ## Problèmes auxquels faire attention :
 * 127 valeurs dupliquées
-* 
+
+# Fait
+## 1-exploration.ipynb
+* Vérifier la distribution de la classe cible
