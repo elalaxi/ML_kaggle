@@ -8,7 +8,7 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
 SEED = 13
-DATA_PATH = Path("student_por.csv")
+DATA_PATH = Path("student-por.csv")
 SPLIT_DIR = Path("split")
 TARGET = "G3"
 
@@ -27,7 +27,7 @@ SCENARIOS = {
 
 
 def load_data(path=DATA_PATH):
-    return pd.read_csv(path)
+    return pd.read_csv(path, sep=";", encoding="utf-8-sig")
 
 
 def save_split(X_train, X_test, y_train, y_test, folder=SPLIT_DIR):
