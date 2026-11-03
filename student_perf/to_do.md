@@ -1,5 +1,5 @@
 # A faire :
-* `Extracurricular_Activities` : one hot encode
+* `Extracurricular_Activities` : one hot encode (drop="if_binary" du OneHotEncoder)
 * Normaliser les valeurs
 * Fixer la graine pour la séparation en train / test
 * Validation croisée (`StratifiedKFold` : `Shuffle= True`)
