@@ -1,6 +1,7 @@
 # outils.py
 from pathlib import Path
 import pandas as pd
+import json
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import KFold, cross_validate
 from sklearn.pipeline import Pipeline
@@ -10,6 +11,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 SEED = 13
 DATA_PATH = Path("student-por.csv")
 SPLIT_DIR = Path("split")
+PARAMS_DIR = Path("params")
 TARGET = "G3"
 
 NUMERIC = ["age", "Medu", "Fedu", "traveltime", "studytime", "failures",
@@ -46,6 +48,15 @@ def load_split(folder=SPLIT_DIR):
     y_train = pd.read_csv(folder / "y_train.csv").squeeze("columns")
     y_test = pd.read_csv(folder / "y_test.csv").squeeze("columns")
     return X_train, X_test, y_train, y_test
+
+def save_params(nom, params, folder=PARAMS_DIR):
+    folder = Path(folder)
+    folder.mkdir(parents=True, exist_ok=True)
+    (folder / f"{nom}.csv").write_text(json.dumps(params, indent=2, ensure_ascii=False, default=lambda o: o.item()))
+
+def load_params(nom, folder=PARAMS_DIR):
+    folder = Path(folder)
+    return json.loads((folder / f"{nom}.csv").read_text(encoding="utf-8-sig"))
 
 
 def build_preprocessor(features):
